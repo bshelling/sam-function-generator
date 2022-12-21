@@ -2,7 +2,7 @@
   <a href="#">
     <picture>
       <source media="(prefers-color-scheme: light)" srcset="https://github.com/bshelling/sam-function-generator/blob/main/images/generator.png">
-      <img src="https://github.com/bshelling/sam-function-generator/blob/main/images/generator.png" height="128">
+      <img src="https://github.com/bshelling/sam-function-generator/blob/main/images/generator.png" height="380">
     </picture>
   </a>
 </p>
