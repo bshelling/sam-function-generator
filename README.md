@@ -8,7 +8,7 @@
 </p>
 
 
-## AWS SAM Function Generator
+## AWS SAM Lambda Function Generator
 A script that generates the necessary files to create a Lambda function for building serverless applications using AWS Serverless Application Model (AWS SAM) based on the `sam init` Typescript example. This doesn't include any testing configurations.
 
 ## Getting Started
