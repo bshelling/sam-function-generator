@@ -1,7 +1,7 @@
 export const makeFileData = (args) => {
     return `
-    build-${args}:
-    cp -a dist/* "$(ARTIFACT_DIR)"
+build-${args}:
+cp -a dist/* "$(ARTIFACTS_DIR)"
     `    
 }
 
