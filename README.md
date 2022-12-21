@@ -19,6 +19,7 @@ The script creates a directory based on the function name entered. If a function
 
 Example executes from within the project folder
 
+```
 | Root directory
 |
 | example-app
@@ -28,6 +29,8 @@ Example executes from within the project folder
 | --|.eslintrc.js
 | --|.eslintignore
 | --| ..
+
+```
 
 ![alt text](https://github.com/bshelling/sam-function-generator/blob/main/images/screenshot.png "Logo Title Text 1")
 
