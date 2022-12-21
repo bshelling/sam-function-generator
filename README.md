@@ -25,7 +25,8 @@ Example executes from within the project folder
 | example-app
 | - template.yml
 | - examplefunction
-| --|-src
+| --|-fn
+| ---- index.ts
 | --|.eslintrc.js
 | --|.eslintignore
 | --| ..
