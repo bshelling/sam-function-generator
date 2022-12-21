@@ -15,7 +15,19 @@ A script that generates the necessary files to create a Lambda function for buil
 ```
 npx aws-sam-function-generator --funcName [function-name]
 ```
-The script creates a directory based on the function name entered. If a function name isn't provided  a random name will be provided.
+The script creates a directory based on the function name entered. If a function name isn't provided  a random name will be provided. 
+
+Example executes from within the project folder
+
+| Root directory
+|
+| example-app
+| - template.yml
+| - examplefunction
+| --|-src
+| --|.eslintrc.js
+| --|.eslintignore
+| --| ..
 
 ![alt text](https://github.com/bshelling/sam-function-generator/blob/main/images/screenshot.png "Logo Title Text 1")
 
