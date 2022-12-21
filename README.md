@@ -13,7 +13,7 @@ A script that generates the necessary files to create a Lambda function for buil
 
 ## Getting Started
 ```
-npx gen-sam-func --funcName [function-name]
+npx aws-sam-function-generator --funcName [function-name]
 ```
 The script creates a directory based on the function name entered. If a function name isn't provided  a random name will be provided.
 
