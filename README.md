@@ -1,8 +1,8 @@
 <p align="center">
   <a href="#">
     <picture>
-      <source media="(prefers-color-scheme: light)" srcset="https://github.com/bshelling//tree/main/images/generator.png">
-      <img src="https://github.com/bshelling//tree/main/images/generator.png" height="128">
+      <source media="(prefers-color-scheme: light)" srcset="https://github.com/bshelling/sam-function-generator/blob/main/images/generator.png">
+      <img src="https://github.com/bshelling/sam-function-generator/blob/main/images/generator.png" height="128">
     </picture>
   </a>
 </p>
@@ -17,7 +17,7 @@ npx gen-sam-func --funcName [function-name]
 ```
 The script creates a directory based on the function name entered. If a function name isn't provided  a random name will be provided.
 
-![alt text](https://github.com/bshelling//tree/main/images/screenshot.png "Logo Title Text 1")
+![alt text](https://github.com/bshelling/sam-function-generator/blob/main/images/screenshot.png "Logo Title Text 1")
 
 
 ## Author
