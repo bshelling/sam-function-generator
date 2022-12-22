@@ -13,7 +13,7 @@ if(args[3] !== undefined){
 
     fs.mkdirSync(`${fnName}/fn`)
 
-    fs.writeFileSync(`${fnName}/Makefile`,makeFileData(),{
+    fs.writeFileSync(`${fnName}/Makefile`,makeFileData(fnName),{
         "encoding": "utf-8"
     })
 
