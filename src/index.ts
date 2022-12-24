@@ -3,6 +3,7 @@
 import * as fs from `node:fs`
 import * as buff from `node:buffer`
 import { makeFileData, esbuildConfig,functionFile,pretty, esLint, tsConfig, esLintIg } from `./filesContents`
+import { pkgJson } from "./filesContents"
 
 let args = process.argv
 
@@ -38,6 +39,10 @@ if(args[3] !== undefined){
     })
 
     fs.writeFileSync(`${fnName}/tsconfig.json`,tsConfig(),{
+        "encoding": "utf-8"
+    })
+
+    fs.writeFileSync(`${fnName}/package.json`,pkgJson(),{
         "encoding": "utf-8"
     })
 

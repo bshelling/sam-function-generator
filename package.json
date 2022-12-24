@@ -1,6 +1,6 @@
 {
   "name": "aws-sam-function-generator",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "author": "bshelling <bshelling@gmail.com>",
   "bin": {
     "gen-sam-func": "dist/index.cjs"

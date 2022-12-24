@@ -2,7 +2,7 @@ export const makeFileData = (args) => {
     return `
 build-${args}:
 cp -a dist/* "$(ARTIFACTS_DIR)"
-    `    
+    `
 }
 
 export const esbuildConfig = () => {
@@ -15,12 +15,12 @@ build({
         minify: true,
         entryPoints: ["fn/index.ts"],
         bundle: true,
-        outfile: "dist",
+        outfile: "dist/fn",
         loader: {".ts":"ts"}
     }).then(() => {
         console.log("Done")
 })
-`    
+`
 }
 
 
@@ -73,7 +73,7 @@ export const esLint = () => {
 parser: "@typescript-eslint/parser",
     parserOptions: {
           ecmaVersion: 2020, // Allows for the parsing of modern ECMAScript features
-          sourceType: "module" 
+          sourceType: "module"
     },
         extends: [
           "plugin:@typescript-eslint/recommended", // recommended rules from the @typescript-eslint/eslint-plugin
@@ -103,10 +103,35 @@ export const tsConfig = () => {
     "sourceMap": false,
     "module":"es2015",
     "moduleResolution":"node",
-    "esModuleInterop": true, 
+    "esModuleInterop": true,
     "skipLibCheck": true,
-    "forceConsistentCasingInFileNames": true,  
+    "forceConsistentCasingInFileNames": true,
     },
     "exclude": ["node_modules", "**/*.test.ts"]
 }`
+}
+
+
+
+export const pkgJson = () => {
+    return `{
+        "scripts": {
+          "build": "node build.config.js"
+        },
+        "type": "module",
+        "author": "",
+        "license": "ISC",
+        "dependencies": {
+          "@aws-sdk/client-dynamodb": "^3.235.0",
+          "aws-lambda": "^1.0.7",
+          "aws-sdk": "^2.1279.0",
+          "esbuild": "^0.16.10",
+          "eslint-import-resolver-typescript": "^3.5.2"
+        },
+        "devDependencies": {
+          "@aws-sdk/types": "^3.226.0",
+          "@types/aws-lambda": "^8.10.109",
+          "typescript": "^4.9.4"
+        }
+      }`
 }
