@@ -1,8 +1,8 @@
 export const makeFileData = (args) => {
     return `
-build-${args}:
-cp -a dist/* "$(ARTIFACTS_DIR)"
-    `
+build-${args[3].toLowerCase()}:
+\tcp -a dist/* "$(ARTIFACTS_DIR)/"
+`
 }
 
 export const esbuildConfig = () => {
