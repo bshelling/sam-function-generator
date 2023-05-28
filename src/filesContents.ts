@@ -1,6 +1,6 @@
 export const makeFileData = (args) => {
   return `
-build-${args[3].toUpperCase()}:
+build-${args[3].toUpperCase() as string}:
 \tcp -a dist/* "$(ARTIFACTS_DIR)/"
 `;
 };
@@ -115,7 +115,6 @@ export const pkgJson = () => {
         "author": "",
         "license": "ISC",
         "dependencies": {
-          "@aws-sdk/client-dynamodb": "^3.235.0",
           "aws-lambda": "^1.0.7",
           "aws-sdk": "^2.1279.0",
           "esbuild": "^0.16.10",
