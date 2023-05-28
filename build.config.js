@@ -7,8 +7,9 @@ build({
   minify: true,
   entryPoints: ["src/index.ts"],
   bundle: true,
-  outdir: "dist/fn",
-  loader: { ".ts": "ts" },
+  outdir: "dist",
+  assetNames: '[name]',
+  outExtension: {'.js':'.cjs'}
 }).then(() => {
   console.log("Done");
 });
