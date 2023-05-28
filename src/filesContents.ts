@@ -1,32 +1,32 @@
 export const makeFileData = (args) => {
-    return `
-build-${args[3].toLowerCase()}:
+  return `
+build-${args[3].toUpperCase()}:
 \tcp -a dist/* "$(ARTIFACTS_DIR)/"
-`
-}
+`;
+};
 
 export const esbuildConfig = () => {
-    return `import {build} from 'esbuild'
+  return `import {build} from 'esbuild'
 
 build({
-        target: "es2020",
+		target: "es2022",
         format: "cjs",
         platform: "node",
         minify: true,
         entryPoints: ["fn/index.ts"],
         bundle: true,
-        outfile: "dist/fn",
-        loader: {".ts":"ts"}
+		outdir: 'dist',
+		assetNames: "[name]",
+        loader: {".ts":"ts"},
+		outExtension: {'.js':'.cjs'}
     }).then(() => {
         console.log("Done")
 })
-`
-}
-
+`;
+};
 
 export const functionFile = () => {
-
-    return `import { APIGatewayProxyEvent, APIGatewayProxyResult } from 'aws-lambda'
+  return `import { APIGatewayProxyEvent, APIGatewayProxyResult } from 'aws-lambda'
 
 export const handler = async (event: APIGatewayProxyEvent):Promise<APIGatewayProxyResult> => {
         try {
@@ -50,13 +50,11 @@ export const handler = async (event: APIGatewayProxyEvent):Promise<APIGatewayPro
 
         }
 };
-`
-}
-
+`;
+};
 
 export const pretty = () => {
-
-    return `
+  return `
 module.exports = {
     semi: true,
     trailingComma: "all",
@@ -64,9 +62,8 @@ module.exports = {
     printWidth: 120,
     tabWidth: 4
 };
-`
-}
-
+`;
+};
 
 export const esLint = () => {
   return `module.exports = {
@@ -87,14 +84,12 @@ parser: "@typescript-eslint/parser",
 };
 
 export const esLintIg = () => {
-    return `node_modules
-.aws-sam`
-}
-
+  return `node_modules
+.aws-sam`;
+};
 
 export const tsConfig = () => {
-
-    return `{
+  return `{
 "compilerOptions": {
     "target": "es2020",
     "strict": true,
@@ -108,13 +103,11 @@ export const tsConfig = () => {
     "forceConsistentCasingInFileNames": true,
     },
     "exclude": ["node_modules", "**/*.test.ts"]
-}`
-}
-
-
+}`;
+};
 
 export const pkgJson = () => {
-    return `{
+  return `{
         "scripts": {
           "build": "node build.config.js"
         },
@@ -133,5 +126,5 @@ export const pkgJson = () => {
           "@types/aws-lambda": "^8.10.109",
           "typescript": "^4.9.4"
         }
-      }`
-}
+      }`;
+};
